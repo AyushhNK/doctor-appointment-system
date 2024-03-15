@@ -4,7 +4,7 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { FaPhone } from "react-icons/fa6";
 import { FaLock } from "react-icons/fa6";
 
-const RegisterPage = () => {
+const RegisterPage = ({gotoLogin}) => {
   return (
     <>
       <div className="min-h-screen bg-gray-100 flex flex-col lg:flex-row items-center">
@@ -109,7 +109,7 @@ const RegisterPage = () => {
           </form>
           <p className="mt-6 text-xl">
             Already have an account?{" "}
-            <a href="#" className="text-purple hover:underline">
+            <a href="#" className="text-purple hover:underline" onClick={gotoLogin}>
               Login!
             </a>
           </p>
