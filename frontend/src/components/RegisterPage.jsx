@@ -13,9 +13,9 @@ const RegisterPage = () => {
         </div>
         <div className="flex flex-col items-center lg:w-1/2">
           <img src="/images/logo.png" alt="logo" />
-          <h1 className="text-4xl font-semibold mt-8">Welcome Back!</h1>
+          <h1 className="text-4xl font-semibold mt-8">Register Here!</h1>
           <p className="text-xl font-mono tracking-wide">
-            Please, enter your details below to login.
+            New user? Enter the details below to register
           </p>
           <form className="flex flex-col w-full lg:w-2/3 mt-8">
           	<div className="relative">
