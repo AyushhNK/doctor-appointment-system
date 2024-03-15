@@ -1,7 +1,7 @@
 import NavBar from './NavBar';
 import AboutUs from './AboutUs'
 import Services from './Services'
-import background from '/images/background.png'; // Import the background image
+import background from '/images/background.png';
 
 const HomePage = () => {
     return (
