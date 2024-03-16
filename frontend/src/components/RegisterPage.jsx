@@ -3,11 +3,12 @@ import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FaPhone } from "react-icons/fa6";
 import { FaLock } from "react-icons/fa6";
+import background from '/images/telehealth.jpg'
 
 const RegisterPage = ({gotoLogin}) => {
   return (
     <>
-      <div className="min-h-screen bg-gray-100 flex flex-col lg:flex-row items-center">
+      <div className="min-h-screen bg-gray-100 flex flex-col lg:flex-row items-center bg-cover bg-center" style={{ height: `calc(142vh)`, backgroundImage: `url(${background})`,backgroundColor:`red` }}>
         <div className="lg:sticky lg:top-0">
           <img src="/images/doc.png" alt="doctor" />
         </div>

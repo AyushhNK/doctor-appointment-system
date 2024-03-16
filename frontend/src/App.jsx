@@ -9,6 +9,7 @@ export default function App() {
   return (
     <>
       {data?<HomePage data={data} setData={setData}/>:<LoginPage setData={setData}/>}
+      
     </>
   )
 }

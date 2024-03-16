@@ -11,13 +11,17 @@ const NavBar = ({data,setData}) => {
         <div className="">
           <ul className="flex gap-16">
             <li>
-            	Home
+            	<a href="#home">Home</a>
             </li>
             <li>
-              <a href="">About Us</a>
+              <a href="#about-us">About Us</a>
             </li>
-            <li>Services</li>
-            <li>Contact</li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
         <div className="flex gap-4">
