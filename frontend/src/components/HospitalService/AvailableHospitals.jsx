@@ -1,5 +1,5 @@
-import NavBar from './NavFooter/NavBar'
-import Footer from './NavFooter/Footer'
+import NavBar from '../NavFooter/NavBar'
+import Footer from '../NavFooter/Footer'
 const AvalilableHospitals=()=>{
 	return (
 		<>
