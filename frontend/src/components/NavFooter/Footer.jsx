@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import { MdLocationPin } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -9,14 +10,6 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
     return (
         <>
-            <div className="h-screen flex flex-col" id="contact">
-                <div className="h-1/2 flex flex-col items-center relative">
-                    <img src="/images/footer.png" alt="foot" className="h-full w-full max-w-[1038px]"/>
-                    <div className="absolute top-10 md:top-20 right-4 md:right-[200px] text-white">
-                        <p className="text-right font-medium text-xl md:text-4xl">Find a doctor and book your <br/>appointment now!</p>
-                        <button className="bg-bluish mt-4 px-6 py-4 text-white ml-[250px]">Book Online</button>
-                    </div>
-                </div>
                 <div className="bg-dark_blue h-auto md:h-1/2 flex flex-col">
 				    <h1 className="text-light_blue font-medium text-3xl mt-4 text-center">Get In Touch</h1>
 				    <div className="flex flex-col md:flex-row justify-around">
@@ -29,6 +22,7 @@ const Footer = () => {
 				            <input type="text" className="bg-dark_blue border-b-2 border-gray focus:outline-none cursor-pointer"/>
 				            <label htmlFor="message" className="pt-1">Message</label>
 				            <input type="text" className="bg-dark_blue border-b-2 border-gray focus:outline-none cursor-pointer pt-10"/>
+				            <button className="bg-bluish mt-4 px-2 py-2 text-white">Send</button>
 				        </div>
 				        <div className="w-full md:w-1/3 flex flex-col mt-4 md:mt-0 gap-2">
 				            <p className="text-white text-2xl text-center">Contact Information</p>
@@ -48,8 +42,7 @@ const Footer = () => {
 				        </div>
 				    </div>
 				</div>
-
-            </div>
+				
         </>
     )
 }

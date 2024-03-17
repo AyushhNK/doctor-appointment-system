@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import NavBar from './NavBar';
+import NavBar from '../NavFooter/NavBar';
 import AboutUs from './AboutUs';
 import Services from './Services';
-import Footer from './Footer';
+import Footer from '../NavFooter/Footer';
 import Header from './Header';
+import FooterImage from './FooterImage';
 import { LuArrowBigUpDash } from "react-icons/lu";
 
 const HomePage = ({ data, setData }) => {
@@ -34,7 +35,10 @@ const HomePage = ({ data, setData }) => {
             )}
             <AboutUs />
             <Services />
-            <Footer />
+            <div className="h-screen flex flex-col" id="contact">
+                <FooterImage />
+                <Footer/>
+            </div>
         </>
     );
 };

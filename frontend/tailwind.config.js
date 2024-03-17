@@ -15,7 +15,8 @@ export default {
         bluish:"#586EEC",
         light_blue:"#80B3FF",
         orange:"#DE8F5F",
-        gray:"#798B8A"
+        gray:"#798B8A",
+        light_gray:"#D9D9D9"
     	},
     },
   },

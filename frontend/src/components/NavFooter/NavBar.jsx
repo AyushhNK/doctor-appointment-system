@@ -4,7 +4,7 @@ const NavBar = ({data,setData}) => {
 	}
   return (
     <>
-      <div className="ml-20 mr-20 flex items-center justify-between h-16" id="home">
+      <div className="px-20 flex items-center justify-between h-16 border-b border-gray shadow-lg" id="home">
         <div className="flex items-center">
           <img src="/images/MedSewa.png" alt="logo" className="pt-4" />
         </div>
