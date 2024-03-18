@@ -35,7 +35,7 @@ const HomePage = ({ data, setData }) => {
             )}
             <AboutUs />
             <Services />
-            <div className="h-screen flex flex-col" id="contact">
+            <div className="flex flex-col h-screen" id="contact">
                 <FooterImage />
                 <Footer/>
             </div>

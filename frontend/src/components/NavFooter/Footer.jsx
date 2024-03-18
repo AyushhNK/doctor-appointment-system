@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <>
                 <div className="bg-dark_blue h-auto md:h-1/2 flex flex-col">
-				    <h1 className="text-light_blue font-medium text-3xl mt-4 text-center">Get In Touch</h1>
+				    <h1 className="text-light_blue font-medium text-3xl mt-2 text-center">Get In Touch</h1>
 				    <div className="flex flex-col md:flex-row justify-around">
 				        <div className="flex flex-col w-full md:w-[385px] text-gray">
 				            <label htmlFor="name" className="pt-1">Name</label>
@@ -21,8 +21,8 @@ const Footer = () => {
 				            <label htmlFor="subject" className="pt-1">Subject</label>
 				            <input type="text" className="bg-dark_blue border-b-2 border-gray focus:outline-none cursor-pointer"/>
 				            <label htmlFor="message" className="pt-1">Message</label>
-				            <input type="text" className="bg-dark_blue border-b-2 border-gray focus:outline-none cursor-pointer pt-10"/>
-				            <button className="bg-bluish mt-4 px-2 py-2 text-white">Send</button>
+				            <input type="text" className="bg-dark_blue border-b-2 border-gray focus:outline-none cursor-pointer pt-2"/>
+				            <button className="bg-bluish mt-2 px-2 py-2 text-white">Send</button>
 				        </div>
 				        <div className="w-full md:w-1/3 flex flex-col mt-4 md:mt-0 gap-2">
 				            <p className="text-white text-2xl text-center">Contact Information</p>
