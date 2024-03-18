@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useContext } from 'react';
 import NavBar from '../NavFooter/NavBar';
 import AboutUs from './AboutUs';
 import Services from './Services';
@@ -6,8 +6,10 @@ import Footer from '../NavFooter/Footer';
 import Header from './Header';
 import FooterImage from './FooterImage';
 import { LuArrowBigUpDash } from "react-icons/lu";
+import LoginContext from '../Contexts/LoginContext'
 
-const HomePage = ({ data, setData }) => {
+const HomePage = () => {
+    const {data,setData}=useContext(LoginContext);
     const [showSticky, setShowSticky] = useState(false);
 
     useEffect(() => {
@@ -26,7 +28,7 @@ const HomePage = ({ data, setData }) => {
 
     return (
         <>
-            <NavBar data={data} setData={setData} />
+            <NavBar/>
             <Header />
             {showSticky && (
                 <div className="fixed bottom-0 right-0 bg-gray-200 p-4">

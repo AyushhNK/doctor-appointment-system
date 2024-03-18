@@ -1,4 +1,10 @@
-const NavBar = ({data,setData}) => {
+import {useContext} from 'react'
+import LoginContext from '../Contexts/LoginContext'
+import { Link } from 'react-router-dom';
+
+
+const NavBar = () => {
+  const {data,setData}=useContext(LoginContext);
 	const logoutFunc=()=>{
 		setData(null)
 	}
@@ -11,16 +17,16 @@ const NavBar = ({data,setData}) => {
         <div className="">
           <ul className="flex gap-16">
             <li>
-            	<a href="#home">Home</a>
+            	<Link to="/#home">Home</Link>
             </li>
             <li>
-              <a href="#about-us">About Us</a>
+              <Link to="/#about-us">About Us</Link>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <Link to="/#services">Services</Link>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <Link to="/#contact">Contact</Link>
             </li>
           </ul>
         </div>

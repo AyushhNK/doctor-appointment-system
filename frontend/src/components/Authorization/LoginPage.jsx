@@ -1,10 +1,12 @@
-import {useState} from 'react';
+import {useState,useContext} from 'react';
 import RegisterPage from './RegisterPage'
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import background from '/images/telehealth.jpg'
+import LoginContext from '../Contexts/LoginContext'
 
-const LoginPage = ({setData}) => {
+const LoginPage = () => {
+	const {setData}=useContext(LoginContext);
 	const [register,setRegister]=useState(false)
 	const [email,setEmail]=useState('')
 	const [password,setPassword]=useState('')
