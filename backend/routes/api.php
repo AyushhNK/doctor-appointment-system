@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\HospitalController;
 
 
 /*
@@ -25,3 +26,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login']);
 
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/hospital', [HospitalController::class, 'index']);
+    Route::get('/hospital/{hospital}', [HospitalController::class, 'show']);
+});
