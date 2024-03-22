@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import LoginPage from './components/Authorization/LoginPage'
+import RegisterPage from './components/Authorization/RegisterPage'
 import AppointmentForm from './components/HospitalService/AppointmentForm'
 import HomePage from './components/MainPage/HomePage'
 import AvailableHospitals from './components/HospitalService/AvailableHospitals'
@@ -17,27 +18,37 @@ export default function App() {
 	      	<Routes>
 	      		<Route path="/" element={
 	      			<>
-	      				{data?<HomePage/>:<LoginPage/>}
+	      				<HomePage/>
+	      			</>
+	      			}></Route>
+	      			<Route path="/login" element={
+	      			<>
+	      				{data ? <HomePage/>:<LoginPage/>}
+	      			</>
+	      			}></Route>
+	      			<Route path="/register" element={
+	      			<>
+	      				<RegisterPage/>
 	      			</>
 	      			}></Route>
 	      			<Route path="/hospitals" element={
 	      			<>
-	      				{data?<AvailableHospitals/>:<LoginPage/>}
+	      				{data?<AvailableHospitals/>:<HomePage/>}
 	      			</>
 	      			}></Route>
 	      			<Route path="/departments" element={
 	      			<>
-	      				{data?<Departments/>:<LoginPage/>}
+	      				{data?<Departments/>:<HomePage/>}
 	      			</>
 	      			}></Route>
 	      			<Route path="/doctors" element={
 	      			<>
-	      				{data?<Doctors/>:<LoginPage/>}
+	      				{data?<Doctors/>:<HomePage/>}
 	      			</>
 	      			}></Route>
 	      			<Route path="/form" element={
 	      			<>
-	      				{data?<AppointmentForm/>:<LoginPage/>}
+	      				{data?<AppointmentForm/>:<HomePage/>}
 	      			</>
 	      			}></Route>
 	      	</Routes>

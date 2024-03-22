@@ -33,7 +33,7 @@ const NavBar = () => {
         <div className="flex gap-4">
         	{data?
         		<>
-	        		<button className="">{data.name}</button>
+	        		<button className="">{data.user.name}</button>
 	          		<button className="p-2 text-white bg-blue rounded-lg" onClick={logoutFunc}>Logout</button>
 	          	</>
 	          	:
