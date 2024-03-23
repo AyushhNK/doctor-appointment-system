@@ -11,9 +11,10 @@ import LoginContext from './components/Contexts/LoginContext'
 
 export default function App() {
   const [data,setData]=useState(null)
+  const [doctor,setDoctor]=useState('')
   return (
     <>
-   	 	<LoginContext.Provider value={{data,setData}}>
+   	 	<LoginContext.Provider value={{data,setData,doctor,setDoctor}}>
 	      <Router>
 	      	<Routes>
 	      		<Route path="/" element={
