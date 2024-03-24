@@ -6,6 +6,31 @@ import LoginContext from '../Contexts/LoginContext'
 
 const AppointmentForm=()=>{
 	const {data,doctor}=useContext(LoginContext)
+
+	const BookFunc = async (event) => {
+	  event.preventDefault();
+	  try {
+	    const response = await axios.post('http://localhost:8000/api/book', {
+	      patient_name,
+	      patient_no,
+	      address,
+	      gender,
+	      age,
+	      doctor_name,
+	      charge,
+	      time
+	    });
+	    if (response.status === 200) {
+	      console.log('Appointment booking successful');
+	      console.log(response.data)
+	    } else {
+	      console.log('Appointment booking failed');
+	    }
+	  } catch (error) {
+	    console.error('Error during booking:', error);
+	  }
+	};
+
 	return (
 		<>
 			<NavBar/>

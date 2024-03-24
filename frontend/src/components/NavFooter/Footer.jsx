@@ -17,9 +17,9 @@ const Footer = () => {
 				    <div className="flex flex-col md:flex-row justify-around">
 				        <div className="flex flex-col w-full md:w-[385px] text-gray">
 				            <label htmlFor="name" className="pt-1">Name</label>
-				            <input type="text" value={data.user.name} className="bg-dark_blue border-b-2 border-gray focus:outline-none cursor-pointer"/>
+				            <input type="text" className="bg-dark_blue border-b-2 border-gray focus:outline-none cursor-pointer"/>
 				            <label htmlFor="email" className="pt-1">Email</label>
-				            <input type="text" value={data.user.email} className="bg-dark_blue border-b-2 border-gray focus:outline-none cursor-pointer"/>
+				            <input type="text" className="bg-dark_blue border-b-2 border-gray focus:outline-none cursor-pointer"/>
 				            <label htmlFor="subject" className="pt-1">Subject</label>
 				            <input type="text" className="bg-dark_blue border-b-2 border-gray focus:outline-none cursor-pointer"/>
 				            <label htmlFor="message" className="pt-1">Message</label>
