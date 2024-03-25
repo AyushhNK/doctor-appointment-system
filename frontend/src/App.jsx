@@ -6,6 +6,7 @@ import HomePage from './components/MainPage/HomePage'
 import AvailableHospitals from './components/HospitalService/AvailableHospitals'
 import Departments from './components/HospitalService/Departments'
 import Doctors from './components/HospitalService/Doctors'
+import Dashboard from './components/HospitalService/Dashboard'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginContext from './components/Contexts/LoginContext'
 
@@ -19,7 +20,8 @@ export default function App() {
 	      	<Routes>
 	      		<Route path="/" element={
 	      			<>
-	      				<HomePage/>
+	      				{/* <HomePage/> */}
+	      				<Dashboard/>
 	      			</>
 	      			}></Route>
 	      			<Route path="/login" element={
@@ -55,6 +57,8 @@ export default function App() {
 	      	</Routes>
 	      </Router>
 	    </LoginContext.Provider>
+
+	    
       
     </>
   )
