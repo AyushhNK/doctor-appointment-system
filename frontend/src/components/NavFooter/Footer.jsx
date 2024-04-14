@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useContext} from 'react'
 import { MdLocationPin } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -6,8 +6,10 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
+import LoginContext from '../Contexts/LoginContext'
 
 const Footer = () => {
+	const {data}=useContext(LoginContext)
     return (
         <>
                 <div className="bg-dark_blue h-auto md:h-1/2 flex flex-col">

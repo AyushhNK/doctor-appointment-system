@@ -20,10 +20,10 @@ const NavBar = () => {
             	<Link to="/#home">Home</Link>
             </li>
             <li>
-              <Link to="/#about-us">About Us</Link>
+              <a href="#about-us">About Us</a>
             </li>
             <li>
-              <Link to="/#services">Services</Link>
+              <a href="#services">Services</a>
             </li>
             <li>
               <Link to="/#contact">Contact</Link>
@@ -33,7 +33,7 @@ const NavBar = () => {
         <div className="flex gap-4">
         	{data?
         		<>
-	        		<button className="">{data.name}</button>
+	        		<button className="">{data.user.name}</button>
 	          		<button className="p-2 text-white bg-blue rounded-lg" onClick={logoutFunc}>Logout</button>
 	          	</>
 	          	:
