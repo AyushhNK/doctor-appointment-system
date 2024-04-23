@@ -1,4 +1,4 @@
-import {useContext} from 'react'
+import {useContext,useEffect} from 'react'
 import NavBar from '../NavFooter/NavBar'
 import Footer from '../NavFooter/Footer'
 import background from '/images/doctors/Appointmentdoctor.png'
@@ -7,6 +7,9 @@ import LoginContext from '../Contexts/LoginContext'
 const AppointmentForm=()=>{
 	const {data,doctor}=useContext(LoginContext)
 
+	useEffect(()=>{
+		window.scrollTo(0,0)
+	},[])
 	const BookFunc = async (event) => {
 	  event.preventDefault();
 	  try {

@@ -20,8 +20,7 @@ export default function App() {
 	      	<Routes>
 	      		<Route path="/" element={
 	      			<>
-	      				{/* <HomePage/> */}
-	      				<Dashboard/>
+	      				<HomePage/>
 	      			</>
 	      			}></Route>
 	      			<Route path="/login" element={
@@ -52,6 +51,11 @@ export default function App() {
 	      			<Route path="/form" element={
 	      			<>
 	      				{data?<AppointmentForm/>:<HomePage/>}
+	      			</>
+	      			}></Route>
+	      			<Route path="/dashboard" element={
+	      			<>
+	      				{data?<Dashboard/>:<HomePage/>}
 	      			</>
 	      			}></Route>
 	      	</Routes>

@@ -1,4 +1,4 @@
-import {useContext} from 'react'
+import {useContext,useEffect} from 'react'
 import NavBar from '../NavFooter/NavBar'
 import Footer from '../NavFooter/Footer'
 import { MdLocationPin } from "react-icons/md";
@@ -8,6 +8,10 @@ import LoginContext from '../Contexts/LoginContext'
 
 const Doctors=()=>{
 	const {doctor,setDoctor}=useContext(LoginContext);
+
+	useEffect(()=>{
+		window.scrollTo(0,0)
+	},[])
 	return (
 		<>
 			<NavBar/>

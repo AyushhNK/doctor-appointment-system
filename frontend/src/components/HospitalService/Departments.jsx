@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import NavBar from '../NavFooter/NavBar'
 import Footer from '../NavFooter/Footer'
 import { MdLocationPin } from "react-icons/md";
@@ -5,6 +6,9 @@ import { FaPhoneAlt } from "react-icons/fa";
 import {Link} from 'react-router-dom'
 
 const Departments=()=>{
+	useEffect(()=>{
+		window.scrollTo(0,0)
+	},[])
 	return (
 		<>
 			<NavBar/>

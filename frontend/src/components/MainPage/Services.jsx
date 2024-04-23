@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Services=()=>{
 	return (
 		<>
@@ -9,8 +11,11 @@ const Services=()=>{
 				    <img src="/images/services.png" alt="service" className="w-[700px] h-[400px]"/>
 				    <h1 className="absolute bottom-0 left-0 text-white text-3xl font-medium mb-4 ml-4">Explore Our Services</h1>
 				</div>
+				<Link to="/dashboard">
+	                <button className="bg-light_blue px-10 py-2 border-2 border-solid border-white rounded-full">Go To Dashboard</button>
+	            </Link>
 
-				<button className="bg-light_blue px-10 py-2 border-2 border-solid border-white rounded-full">Go To Dashboard</button>
+				
 
 			</div>
 		</>

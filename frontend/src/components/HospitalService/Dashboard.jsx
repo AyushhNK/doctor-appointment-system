@@ -1,7 +1,11 @@
+import {useEffect} from 'react'
 import NavBar from '../NavFooter/NavBar';
 import Footer from '../NavFooter/Footer';
 
 const Dashboard = () => {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     return (
         <>
             <NavBar />
