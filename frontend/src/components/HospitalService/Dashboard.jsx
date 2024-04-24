@@ -1,11 +1,13 @@
-import {useEffect} from 'react'
+import {useEffect,useContext} from 'react'
 import NavBar from '../NavFooter/NavBar';
 import Footer from '../NavFooter/Footer';
+import scrollToTop from '../customhooks/useScrollToTop'
+import LoginContext from '../Contexts/LoginContext'
 
 const Dashboard = () => {
-    useEffect(()=>{
-        window.scrollTo(0,0)
-    },[])
+    const {data}=useContext(LoginContext);
+    
+    scrollToTop()
     return (
         <>
             <NavBar />
@@ -32,6 +34,18 @@ const Dashboard = () => {
                                         <p className="text-gray-600">Time:</p>
                                         <p className="text-lg font-medium">March 25, 2024 | 10:00 AM</p>
                                     </div>
+                                    {data.userType=="doctor" && 
+                                    <>
+                                        <div className="flex flex-col">
+                                            <button className="text-white bg-green-600 w-24 rounded-xl">Accept</button>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <button className="text-white bg-red-600 w-24 rounded-xl">Decline</button>
+                                        </div>
+                                    </>
+                                    }
+                                    
+
                                 </div>
                             </div>
                         </li>

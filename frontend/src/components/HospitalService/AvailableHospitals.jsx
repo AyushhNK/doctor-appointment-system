@@ -2,10 +2,11 @@ import {useEffect} from 'react'
 import NavBar from '../NavFooter/NavBar'
 import Footer from '../NavFooter/Footer'
 import {Link} from 'react-router-dom'
+import scrollToTop from '../customhooks/useScrollToTop'
+
 const AvalilableHospitals=()=>{
-	useEffect(()=>{
-		window.scrollTo(0,0)
-	},[])
+
+	scrollToTop()
 	return (
 		<>
 			<NavBar/>

@@ -24,10 +24,12 @@ const LoginPage = () => {
 	      email,
 	      password,
 	    });
+	    // const response=await axios.get('https://mocki.io/v1/5d01e48f-28cd-470d-8355-50b0ce008ad9')
 	    if (response.status === 200) {
 	      console.log('login successful');
 	      console.log(response.data)
 	      setData(response.data);
+
 	      setLoading(false)
 	    } else {
 	      console.log('login failed');

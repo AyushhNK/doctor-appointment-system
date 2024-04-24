@@ -5,13 +5,12 @@ import { MdLocationPin } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import {Link} from 'react-router-dom'
 import LoginContext from '../Contexts/LoginContext' 
+import scrollToTop from '../customhooks/useScrollToTop'
 
 const Doctors=()=>{
 	const {doctor,setDoctor}=useContext(LoginContext);
 
-	useEffect(()=>{
-		window.scrollTo(0,0)
-	},[])
+	scrollToTop()
 	return (
 		<>
 			<NavBar/>

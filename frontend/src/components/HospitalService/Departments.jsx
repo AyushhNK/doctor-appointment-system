@@ -4,11 +4,11 @@ import Footer from '../NavFooter/Footer'
 import { MdLocationPin } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import {Link} from 'react-router-dom'
+import scrollToTop from '../customhooks/useScrollToTop'
 
 const Departments=()=>{
-	useEffect(()=>{
-		window.scrollTo(0,0)
-	},[])
+	
+	scrollToTop()
 	return (
 		<>
 			<NavBar/>

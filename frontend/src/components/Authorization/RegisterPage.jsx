@@ -15,6 +15,7 @@ const RegisterPage = () => {
   const [name, setName] = useState('');
   const [phone_number, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
+  const [userType,setUserType]=useState('')
   const [password, setPassword] = useState('');
   const [password_confirmation, setPasswordConfirmation] = useState('');
   const [error, setError] = useState(false);
@@ -131,6 +132,15 @@ const RegisterPage = () => {
                     <MdAlternateEmail className="absolute right-4 text-3xl text-gray-500" />
                   </div>
                 </div>
+                <div className="flex items-center">
+                    <label className="text-xl font-mono tracking-wide mt-4">
+                      Are you a doctor or a patient?
+                      <select value={userType} onChange={(e)=>setUserType(e.target.value)}>
+                        <option value="doctor">Doctor</option>
+                        <option value="patient">Patient</option>
+                      </select>
+                    </label>
+                </div>
                 <div className="relative mt-6">
                   <label
                     htmlFor="password"
@@ -171,7 +181,7 @@ const RegisterPage = () => {
                   Register
                 </button>
               </form>
-              <p className="mt-6 text-xl">
+              <p className="text-xl">
                 Already have an account?{" "}
                 <a href="/login" className="text-purple hover:underline">
                   Login!
