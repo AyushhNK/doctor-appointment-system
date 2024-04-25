@@ -7,8 +7,10 @@ import Header from './Header';
 import FooterImage from './FooterImage';
 import Dashboard from '../HospitalService/Dashboard'
 import { LuArrowBigUpDash } from "react-icons/lu";
+import LoginContext from '../Contexts/LoginContext'
 
-const HomePage = () => {
+const DefaultPage = () => {
+    const {data,setData}=useContext(LoginContext);
     const [showSticky, setShowSticky] = useState(false);
 
     useEffect(() => {
@@ -27,6 +29,8 @@ const HomePage = () => {
 
     return (
         <>
+            {data.userType=="doctor"?<Dashboard/>:
+            <>
             <NavBar/>
             <Header />
             {showSticky && (
@@ -40,8 +44,10 @@ const HomePage = () => {
                 <FooterImage />
                 <Footer/>
             </div>
+            </>
+            }
         </>
     );
 };
 
-export default HomePage;
+export default DefaultPage;

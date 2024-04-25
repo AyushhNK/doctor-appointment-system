@@ -3,6 +3,7 @@ import LoginPage from './components/Authorization/LoginPage'
 import RegisterPage from './components/Authorization/RegisterPage'
 import AppointmentForm from './components/HospitalService/AppointmentForm'
 import HomePage from './components/MainPage/HomePage'
+import DefaultPage from './components/MainPage/DefaultPage'
 import AvailableHospitals from './components/HospitalService/AvailableHospitals'
 import Departments from './components/HospitalService/Departments'
 import Doctors from './components/HospitalService/Doctors'
@@ -25,7 +26,7 @@ export default function App() {
 	      			}></Route>
 	      			<Route path="/login" element={
 	      			<>
-	      				{data ? <HomePage/>:<LoginPage/>}
+	      				{data ? <DefaultPage/>:<LoginPage/>}
 	      			</>
 	      			}></Route>
 	      			<Route path="/register" element={
