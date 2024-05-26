@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\AppointmentController;
 
 
 /*
@@ -26,7 +27,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login']);
+Route::post('/book',[AppointmentController::class,'store']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/form/store',[ContactFormController::class,'store'])->name('form.store');
 });
+
