@@ -7,9 +7,12 @@ import Header from './Header';
 import FooterImage from './FooterImage';
 import Dashboard from '../HospitalService/Dashboard'
 import { LuArrowBigUpDash } from "react-icons/lu";
+import scrollToTop from '../customhooks/useScrollToTop'
 
 const HomePage = () => {
     const [showSticky, setShowSticky] = useState(false);
+
+    scrollToTop();
 
     useEffect(() => {
         const handleScroll = () => {
