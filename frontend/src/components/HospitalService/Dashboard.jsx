@@ -34,7 +34,7 @@ const Dashboard = () => {
                                         <p className="text-gray-600">Time:</p>
                                         <p className="text-lg font-medium">March 25, 2024 | 10:00 AM</p>
                                     </div>
-                                    {data.userType=="doctor" && 
+                                    {data.user.email=="admin@admin.com" && 
                                     <>
                                         <div className="flex flex-col">
                                             <button className="text-white bg-green-600 w-24 rounded-xl">Accept</button>

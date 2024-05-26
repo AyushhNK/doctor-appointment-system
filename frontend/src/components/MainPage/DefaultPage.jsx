@@ -26,10 +26,9 @@ const DefaultPage = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
     return (
         <>
-            {data.userType=="doctor"?<Dashboard/>:
+            {data.user.email=="admin@admin.com"?<Dashboard/>:
             <>
             <NavBar/>
             <Header />
