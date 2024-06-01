@@ -28,8 +28,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/book',[AppointmentController::class,'store']);
-
-Route::middleware('auth:sanctum')->group(function () {
-    Route::post('/form/store',[ContactFormController::class,'store'])->name('form.store');
-});
+Route::get('get-appointment',[AppointmentController::class,'getAppointment']);
+Route::delete('/appointments/{appointmentId}', [AppointmentController::class, 'deleteAppointment']);
+Route::patch('/update-status/{appointmentId}',[AppointmentController::class,'updateStatus']);
 

@@ -32,4 +32,65 @@ class AppointmentController extends Controller
             'appointment' => $appointment,
         ], 200);
     }
+    public function getAppointment()
+    {
+        $appointments = Appointment::all();
+        if($appointments)
+        return response()->json([
+            'message' => 'Found appointments',
+            'appointment' => $appointments,
+        ],400);
+        else
+        return response()->json([
+            'message' => 'No appointments',
+            'appointment' => null,
+        ],404);
+    }
+
+    public function deleteAppointment($appointmentId=null)
+    {
+        if ($appointmentId) {
+            $appointment = Appointment::find($appointmentId);
+
+            if ($appointment) {
+                $appointment->delete();
+
+                return response()->json([
+                    'message' => 'Successfully Deleted',
+                ], 200); 
+            } else {
+                return response()->json([
+                    'message' => 'Appointment not found',
+                ], 404); 
+            }
+        } else {
+            return response()->json([
+                'message' => 'Appointment ID is required',
+            ], 400); 
+        }
+    }
+    public function updateStatus($appointmentId = null)
+    {
+        if ($appointmentId) {
+            $appointment = Appointment::find($appointmentId);
+
+            if ($appointment) {
+                $status = !$appointment->status;
+                $appointment->update(['status' => $status]);
+
+                return response()->json([
+                    'message' => 'Successfully Updated',
+                    'appointment' =>  $appointment,
+                ], 200); 
+            } else {
+                return response()->json([
+                    'message' => 'Appointment not found',
+                ], 404); 
+            }
+        } else {
+            return response()->json([
+                'message' => 'Appointment ID is required',
+            ], 400); 
+        }
+    }
 }
