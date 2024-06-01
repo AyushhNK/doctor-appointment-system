@@ -42,6 +42,14 @@ const AppointmentForm = () => {
     }
   };
 
+  const generateTimeOptions = () => {
+    const options = [];
+    for (let hour = 10; hour <= 17; hour++) {
+      options.push(`${hour}:00`);
+    }
+    return options;
+  };
+
   return (
     <>
       <NavBar />
@@ -78,7 +86,17 @@ const AppointmentForm = () => {
               <input type="text" id="charge" value="Rs 50" readOnly className="border-b-2 border-gray focus:outline-none cursor-pointer" />
 
               <label htmlFor="time" className="pt-1 text-[14px] font-medium">Available Time</label>
-              <input type="text" id="time" value={time} onChange={(e) => setTime(e.target.value)} className="border-b-2 border-gray focus:outline-none cursor-pointer" />
+              <select
+                id="time"
+                value={time}
+                onChange={(e) => setTime(e.target.value)}
+                className="border-b-2 border-gray focus:outline-none cursor-pointer"
+              >
+                <option value="">Select Time</option>
+                {generateTimeOptions().map(option => (
+                  <option key={option} value={option}>{option}</option>
+                ))}
+              </select>
             </div>
           </div>
           <button className="bg-purple w-[406px] h-[65px] mt-8 text-white opacity-100 rounded-lg" onClick={BookFunc}>Book Online</button>
