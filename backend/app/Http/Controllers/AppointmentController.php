@@ -39,7 +39,7 @@ class AppointmentController extends Controller
         return response()->json([
             'message' => 'Found appointments',
             'appointment' => $appointments,
-        ],400);
+        ],200);
         else
         return response()->json([
             'message' => 'No appointments',
